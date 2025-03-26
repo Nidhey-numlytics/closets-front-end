@@ -1,6 +1,6 @@
 import axios from "axios";
 //const BASE_URL = 'https://d203-49-36-91-66.ngrok-free.app/api/pdf'
-const BASE_URL = 'https://cbdcontractsdev.azurewebsites.net/api/pdf';
+const BASE_URL = 'https://cbdcontract20250326.azurewebsites.net/api/pdf';
 export const filters = {
     jobId:'',
     clientName: ''
