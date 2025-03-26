@@ -171,7 +171,7 @@ const Home = (props) => {
       setDoorSelectedSeries("");
       setDoorSelectedVariant("");
     }
-  }, [doorDecoStyle]);
+  }, [seriesOptions],[doorDecoStyle]);
 
   useEffect(() => {
     if (doorSelectedSeries) {
@@ -182,7 +182,7 @@ const Home = (props) => {
     } else {
       setDoorSelectedVariant("");
     }
-  }, [doorSelectedSeries]);
+  }, [variantOptions],[doorSelectedSeries]);
 
   // For Drawer
   useEffect(() => {
@@ -195,7 +195,7 @@ const Home = (props) => {
       setDrawerSelectedSeries("");
       setDrawerSelectedVariant("");
     }
-  }, [drawerDecoStyle]);
+  }, [seriesOptions],[drawerDecoStyle]);
 
   useEffect(() => {
     if (drawerSelectedSeries) {
@@ -206,7 +206,7 @@ const Home = (props) => {
     } else {
       setDrawerSelectedVariant("");
     }
-  }, [drawerSelectedSeries]);
+  }, [variantOptions],[drawerSelectedSeries]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
