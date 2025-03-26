@@ -154,7 +154,7 @@ export default function Login(props) {
                 id="email"
                 type="email"
                 name="email"
-                placeholder="username@domain.com"
+                placeholder="username@demon.com"
                 autoComplete="email"
                 autoFocus
                 required
