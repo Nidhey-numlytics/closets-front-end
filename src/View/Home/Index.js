@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   Box,
   Card,
@@ -72,22 +72,22 @@ const Home = (props) => {
   const [pdfBlobUrl, setPdfBlobUrl] = useState(null);
 
   // Options as provided
-  const colorOptions = {
+  const colorOptions = useMemo(() => ({
     Everyday: ["White", "Antique White", "Grey"],
     Classic: ["White", "Antique White"],
     Brio: ["Winter Fun", "Sunset Cruise"],
-  };
+  }), []);
 
-  const seriesOptions = {
+  const seriesOptions = useMemo(() => ({
     Deco: ["Deco 00", "Deco 01", "Deco 70"],
     Avanti: ["Avanti Shaker 90"],
-  };
+  }), []);
 
-  const variantOptions = {
+  const variantOptions = useMemo(() => ({
     "Deco 00": ["Variant 100"],
     "Deco 01": ["Variant 101", "Variant 201"],
     "Deco 70": ["Variant 170", "Variant 270"],
-  };
+  }), []);
 
   // Dynamic grid for Client Details section (2x2 layout)
   const clientDetailsColumns = 2; // Change this value to adjust grid (e.g., 3 for 3x1)

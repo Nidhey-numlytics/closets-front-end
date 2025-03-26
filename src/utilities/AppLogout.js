@@ -20,6 +20,12 @@ const AppLogout = ({ children }) => {
     }
   }, []);
 
+  // logoutAction can be memoized as well
+  const logoutAction = useCallback(() => {
+    localStorage.clear();
+    window.location.pathname = "/login";
+  }, []);
+
   // handleTimer is memoized and depends on resetTimer
   const handleTimer = useCallback(() => {
     timerRef.current = setTimeout(() => {
@@ -28,11 +34,7 @@ const AppLogout = ({ children }) => {
     }, 5000000);
   }, [resetTimer, logoutAction]);
 
-  // logoutAction can be memoized as well
-  const logoutAction = useCallback(() => {
-    localStorage.clear();
-    window.location.pathname = "/login";
-  }, []);
+
 
   // Attach event listeners once on mount and clean up on unmount.
   useEffect(() => {
