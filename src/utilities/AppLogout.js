@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from "react";
+import { useEffect, useCallback, useRef } from "react";
 
 const events = [
   "load",
@@ -26,7 +26,7 @@ const AppLogout = ({ children }) => {
       resetTimer();
       logoutAction();
     }, 5000000);
-  }, [resetTimer]);
+  }, [resetTimer, logoutAction]);
 
   // logoutAction can be memoized as well
   const logoutAction = useCallback(() => {
